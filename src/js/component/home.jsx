@@ -8,11 +8,12 @@ const Home = () => {
 	const [input,setInput] = useState("")
 	const [list,setList] = useState([])
 	const[count,setCount]= useState(0);
-	const deleteItem = () => {	
+	const deleteItem = (recived) => {	
+	const newList = list.filter((filterTask, filterIndex)=> recived != filterIndex)
+	setList (newList);
 	}
 useEffect (()=>{setCount(list.length);},[list]);
-	const countTask = count < 2 ? 'Task' : 'Tasks';
-
+	const changeTask = count < 2 ? 'task' : 'tasks';
 		return (
 		<div className="text-center">
 			<h1>4Geeks: To Do List</h1>
@@ -30,22 +31,22 @@ useEffect (()=>{setCount(list.length);},[list]);
 						placeholder="What do I need to do?">
 				</input>
 			</div>
-
-			{list.length > 0 ? list.map((task,index)=>{
+			{list.length > 0 ? list.map((mapTask,mapIndex)=>{
 				return( 
-				<div className="rowTask">
+				<div className="rowTask effect">
 					<div>
 						<ul>
-						<li>{task}</li>
+						<li>{mapTask}</li>
 						</ul>
 					</div>
-					<div onClick={()=>deleteItem()} className= "iconDelete">
-						<i class="fas fa-trash-alt"></i>
+					<div onClick={()=>deleteItem(mapIndex)} className= "iconDelete">
+						
+						<i class="fas fa-trash-alt"title="Delete"style={{ cursor: "pointer" }}></i>
 					</div>
 				</div>
 				);
 			}):""}
-				<div>{count} {countTask}</div>
+				<div className="countTask">{count} {changeTask}</div>
 		</div>
 	);
 };

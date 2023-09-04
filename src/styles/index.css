@@ -45,3 +45,15 @@ ul li {
     list-style: none;
     padding: 5px;
 }
+.effect:hover{
+    color: white; /* Altera a cor do texto quando o mouse passa sobre o botão */
+    background-color:black; /* Altera a cor de fundo quando o mouse passa sobre o botão */
+  }
+.iconDelete:hover {
+    color: red /* Altera a cor do texto quando o mouse passa sobre o botão */
+  }
+  .countTask{
+    margin-right:100%;
+    width: 100%;
+  }
+
