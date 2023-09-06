@@ -20,17 +20,20 @@ body {
     margin: 1px;
     padding: 3px;
 }
+
 .inputTasks{
     width: 551px;
     border: 1px solid darkgray;
     padding: 3px;
 }
+
 .task-item {
     width: 80%;
     border: 1px solid darkgray;
     list-style: none;
     padding: 5px;
 }
+
 input {
     border: none;
     width: 100%;
@@ -45,15 +48,13 @@ ul li {
     list-style: none;
     padding: 5px;
 }
-.effect:hover{
-    color: white; /* Altera a cor do texto quando o mouse passa sobre o botão */
-    background-color:black; /* Altera a cor de fundo quando o mouse passa sobre o botão */
-  }
-.iconDelete:hover {
-    color: red /* Altera a cor do texto quando o mouse passa sobre o botão */
-  }
-  .countTask{
+
+.effect:hover {
+    color: white;
+    background-color:black; 
+}
+
+.countTask {
     margin-right:100%;
     width: 100%;
-  }
-
+}
